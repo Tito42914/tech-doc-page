@@ -3,59 +3,107 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title><!--make up title later please-->
+    <title>A Beginner's Guide to CSS Layout Techniques</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <nav id="navbar">
-      <!-- nav content -->
-      <header><!--add text corresponding title of the document--></header>
-        <a class="nav-link" href="#section1-id>"><!--add text corresponding to section 1--></a>
-        <a class="nav-link" href="#section2-id"><!--add text corresponding to section 2--></a>
-        <a class="nav-link" href="#section3-id"><!--add text corresponding to section 3--></a>
-        <a class="nav-link" href="#section4-id"><!--add text corresponding to section 4--></a>
-        <a class="nav-link" href="#section5-id"><!--add text corresponding to section 5--></a>
+      <header>A Beginner's Guide to CSS Layout Techniques</header>
+        <a class="nav-link" href="Introduction>">Introduction</a>
+        <a class="nav-link" href="box-model">Understanding the Box Model</a>
+        <a class="nav-link" href="flexbox">Flexible Box Layout (Flexbox)</a>
+        <a class="nav-link" href="grid">CSS Grid Layout</a>
+        <a class="nav-link" href="positioning">Positioning and Float</a>
+        <a class="nav-link" href="media-queries">Responsive Layouts with Media Queries</a>
     </nav>
     <main id="main-doc">
-      <section class="main-section" id="<!--check 8-->">
-        <header><!--match id text--></header>
-          <p></p>
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+          <p>CSS layout techniques control the visual structure of a webpage — how elements are arranged and sized within the browser.</p>
+          <p>Modern web design relies on flexible and responsive layouts to support various screen sizes and devices.</p>
+      </section>
+      <section class="main-section" id="box-model">
+        <header>Understanding the Box Model</header>
+          <p>The CSS box model describes how elements are visually represented as rectangular boxes, including margins, borders, padding, and the actual content area.</p>
+          <code>div { box-sizing: border-box; }</code>
           <ul>
-            <li><code><!--e.g.wrap around text that you'd find in programming docs--></code></li>
+            <li>Content - the actual text or image</li>
+            <li>Padding - space around the content</li>
+            <li>Border - wraps the padding and content</li>
+            <li>Margin - space outside the border</li>
           </ul>
-          <p></p>
       </section>
-      <section class="main-section" id="<!--check 8-->">
-        <header><!--match id text--></header>
-          <p></p>
-          <ul>
-            <li><code><!--e.g.wrap around text that you'd find in programming docs--></code></li>
-          </ul>
-          <p></p>
-      </section>
-      <section class="main-section" id="<!--check 8-->">
-        <header><!--match id text--></header>
-        <p></p>
+      <section class="main-section" id="flexbox">
+        <header>Flexible Box Layout (Flexbox)</header>
+        <p>Flexbox is a one-dimensional layout method that makes it easy to align and distribute space among items in a container.</p>
+        <p>It's ideal for building navbars, cards, and centered layouts.</p>
+        <code>
+          .container {
+            display: flex;
+            justify-content: space-between;
+          }
+        </code>
         <ul>
-          <li><code><!--e.g.wrap around text that you'd find in programming docs--></code></li>
+          <li>display</li>
+          <li>flex-direction</li>
+          <li>justify-content</li>
+          <li>align-items</li>
+          <li>gap</li>
         </ul>
-        <p></p>
       </section>
-      <section class="main-section" id="<!--check 8-->">
-        <header><!--match id text--></header>
-        <p></p>
+      <section class="main-section" id="grid">
+        <header>CSS Grid Layout</header>
+        <p>Grid is a two-dimensional layout system for web design. It allows you to create complex layouts with rows and columns.</p>
+        <p>It's excellent for full-page layouts and dashboards.</p>
+        <code>
+          .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+          }
+        </code>
         <ul>
-          <li><code><!--e.g.wrap around text that you'd find in programming docs--></code></li>
+          <li>grid-template-rows</li>
+          <li>grid-template-columns</li>
+          <li>grid-area</li>
+          <li>gap</li>
+          <li>place-items</li>
         </ul>
-        <p></p>
       </section>
-      <section class="main-section" id="<!--check 8-->">
-        <header><!--match id text--></header>
-        <p></p>
+      <section class="main-section" id="positioning">
+        <header>Positioning and Float</header>
+        <p>Before Flexbox and Grid, web developers used float and positioning to create layouts. While less common now, these properties are still useful in specific situations.</p>
+        <code>
+          .box {
+            float: left;
+            width: 50%;
+          }
+        </code>
         <ul>
-          <li><code><!--e.g.wrap around text that you'd find in programming docs--></code></li>
+          <li>static</li>
+          <li>relative</li>
+          <li>absolute</li>
+          <li>fixed</li>
+          <li>sticky</li>
         </ul>
-        <p></p>
+      </section>
+      <section class="main-section" id="media-queries">
+        <header>Responsive Layouts with Media Queries</header>
+        <p>Media queries are used to apply different styles depending on screen size or device type. They help create responsive designs.</p>
+        <code>
+          @media (max-width: 768px) {
+            .container {
+              flex-direction: column;
+            }
+          }
+        </code>
+        <ul>
+          <li>@media</li>
+          <li>min-width</li>
+          <li>max-width</li>
+          <li>orientation</li>
+          <li>aspect-ratio</li>
+        </ul>
       </section>
     </main>
   </body>
