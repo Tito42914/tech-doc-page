@@ -1,1 +1,27 @@
+body {
+  display: flex;
+}
 
+#navbar {
+  width: 250px;
+  min-width: 150px;
+  height: 100vh;
+  background-color: #5e5e5e;
+  border: 1px solid #000;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #navbar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
